@@ -1,6 +1,6 @@
 import java.util.Comparator;
 
-public class ComparadorCliente implements Comparator<Cliente> {
+public class ComparadorClienteId implements Comparator<Cliente> {
 
     @Override
     public int compare(Cliente c1, Cliente c2) {

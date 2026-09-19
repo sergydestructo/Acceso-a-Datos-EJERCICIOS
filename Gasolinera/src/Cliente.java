@@ -42,7 +42,7 @@ public class Cliente implements Comparable<Cliente> {
 
     @Override
     public String toString() {
-        return "ID: " + getId() + " NOMBRE: " + getNombre() + " TLFN: " + getTlfn() + " MATRICULA: " + getTlfn();
+        return "ID: " + getId() + " NOMBRE: " + getNombre() + " TLFN: " + getTlfn() + " MATRICULA: " + getMatricula();
     }
 
     @Override

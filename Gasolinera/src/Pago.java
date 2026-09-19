@@ -1,7 +1,6 @@
 import java.util.Date;
 import java.util.Objects;
-
-public class Pago {
+public class Pago implements Comparable<Pago>{
     final private int id;
     final private int idCliente;
     final private Date fecha;
@@ -15,8 +14,27 @@ public class Pago {
         this.id = id;
         this.idCliente = idCliente;
         this.fecha = fecha;
+
+        if (importe <= 0) {
+            throw new IllegalArgumentException("El importe debe ser mayor que 0");
+        }
+
+        if (importe * 100 % 1 != 0) {
+            throw new IllegalArgumentException("El importe debe tener maximo dos decimales");
+        }
+
         this.importe = importe;
+
+        if (litros <= 0) {
+            throw new IllegalArgumentException("Los litros deben ser mayores que 0");
+        }
+
+        if (litros * 100 % 1 != 0) {
+            throw new IllegalArgumentException("Los litros deben tener máximo dos decimales");
+        }
+
         this.litros = litros;
+
         this.combustible = combustible;
     }
 
@@ -29,6 +47,11 @@ public class Pago {
     @Override
     public int hashCode() {
         return Objects.hash(getId(), getIdCliente(), getFecha(), getImporte(), getLitros(), getCombustible());
+    }
+
+    @Override
+    public int compareTo(Pago o) {
+        return o.getFecha().compareTo(fecha);
     }
 
     public int getId() {

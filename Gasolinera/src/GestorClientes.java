@@ -13,6 +13,9 @@ public class GestorClientes {
     public void crearCliente(String nombre, String tlfn, String matricula) {
         if (!existeCliente(matricula)) {
             clientes.add(new Cliente(clientes.size() + 1, nombre, tlfn, matricula));
+
+            //Llamada a clase gestora de escribir en archivo, se hará más adelante
+
             System.out.println("Cliente con identificador " + clientes.size() + " añadido.");
         } else {
             System.out.println("Ya existe un cliente con esa matricula");
@@ -20,15 +23,15 @@ public class GestorClientes {
     }
 
     private void mostrarClientes(List<Cliente> clientes) {
-        clientes.sort(new ComparadorCliente());
+        clientes.sort(new ComparadorClienteId());
 
         for (Cliente cliente : clientes) {
             System.out.println(cliente);
         }
     }
 
-    public void listarClientes(){
-        if (existenClientes()) {
+    public void listarClientes() {
+        if (!existenClientes()) {
             System.out.println("No existe ningún cliente");
         } else {
             mostrarClientes(clientes);
@@ -50,6 +53,15 @@ public class GestorClientes {
         } else {
             mostrarClientes(resultados);
         }
+    }
+
+    public Cliente buscarPorId(int id) {
+        for (Cliente cliente : clientes) {
+            if (cliente.getId() == id) {
+                return cliente;
+            }
+        }
+        return null;
     }
 
     private boolean existeCliente(String matricula) {
