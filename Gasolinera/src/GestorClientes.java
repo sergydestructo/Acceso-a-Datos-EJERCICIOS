@@ -1,52 +1,58 @@
 import java.util.ArrayList;
+import java.util.List;
 
 public class GestorClientes {
-    ArrayList<Cliente> clientes;
+    private List<Cliente> clientes;
 
-    GestorClientes(){
+
+    // Cuando haya que gestionar lectura y escritura, sopesar si es necesario sobrecargar el constructor o directamente hacerlo distinto (Con un parametro tampoco hay que liarse)
+    public GestorClientes() {
         this.clientes = new ArrayList<Cliente>();
     }
 
-    // mover SOUTS a clase UI, cambiando el tipo de retorno a boolean o no, tengo que preguntar
-    public void crearCliente(String nombre, String tlfn, String matricula){
+    public void crearCliente(String nombre, String tlfn, String matricula) {
         if (!existeCliente(matricula)) {
             clientes.add(new Cliente(clientes.size() + 1, nombre, tlfn, matricula));
             System.out.println("Cliente con identificador " + clientes.size() + " añadido.");
         } else {
             System.out.println("Ya existe un cliente con esa matricula");
         }
-
     }
 
-    // Implementar comparable/comparator para poder ordenar de manera correcta (Primero por nombre, si nombre coincide, por ID ascendente)
+    private void mostrarClientes(List<Cliente> clientes) {
+        clientes.sort(new ComparadorCliente());
+
+        for (Cliente cliente : clientes) {
+            System.out.println(cliente);
+        }
+    }
+
     public void listarClientes(){
-        if (clientes.isEmpty()) {
+        if (existenClientes()) {
             System.out.println("No existe ningún cliente");
         } else {
-            for (Cliente cliente : clientes) {
-                System.out.println(cliente.toString());
-            }
+            mostrarClientes(clientes);
         }
     }
 
-    // Refinar el metodo para que se ajuste a lo pedido en la practica, es decir, que ignore mayusculas y minusculas
+    // Refinar el metodo para que se ajuste a lo pedido en la practica, es decir, que ignore mayusculas y minusculas <- Se encargará el gestor de texto
     public void buscarCliente(String input){
+        List<Cliente> resultados = new ArrayList<>();
 
-        int clientesMostrados = 0;
         for (Cliente cliente : clientes) {
             if (cliente.getMatricula().contains(input) || cliente.getNombre().contains(input) || cliente.getTlfn().contains(input)) {
-                clientesMostrados++;
-                System.out.println(cliente);
+                resultados.add(cliente);
             }
-
         }
 
-        if (clientesMostrados == 0) {
-            System.out.println("Ningun cliente cumple los requisitos de busqueda");
+        if (resultados.isEmpty()) {
+            System.out.println("No existe ningún cliente que cumpla los requisitos de busqueda");
+        } else {
+            mostrarClientes(resultados);
         }
     }
 
-    public boolean existeCliente(String matricula) {
+    private boolean existeCliente(String matricula) {
         for (Cliente cliente : clientes) {
             if (cliente.getMatricula().equals(matricula)) {
                 return true;
@@ -54,6 +60,7 @@ public class GestorClientes {
         }
         return false;
     }
+
     // metodo sobrecargado para procesar pagos
     public boolean existeCliente(int id) {
         for (Cliente cliente : clientes) {
@@ -64,22 +71,7 @@ public class GestorClientes {
         return false;
     }
 
-    public static void main(String[] args) {
-        GestorClientes prueba = new GestorClientes();
-
-        prueba.listarClientes();
-
-        prueba.crearCliente("Sergio","634021859","ABC1234");
-        prueba.crearCliente("Ivan", "123456789","DCBA321");
-        prueba.crearCliente("Locura", "321312312", "ABC1234");
-
-        prueba.listarClientes();
-
-        prueba.buscarCliente("Sergio");
-
-        prueba.buscarCliente("4");
-
-        prueba.buscarCliente("H");
-
+    private boolean existenClientes() {
+        return !clientes.isEmpty();
     }
 }
