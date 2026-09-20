@@ -11,7 +11,7 @@ public class GestorPagos {
         this.gestorClientes = gestorClientes;
     }
 
-    public void crearPago(int idCliente, Date fecha, float importe, float litros, String combustible) {
+    public void crearPago(int idCliente, Date fecha, Double importe, Double litros, Combustible combustible) {
         pagos.add(new Pago(pagos.size() + 1, idCliente, fecha, importe, litros, combustible));
 
         //Llamada a clase gestora de escribir en archivo, se hará más adelante

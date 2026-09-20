@@ -41,9 +41,12 @@ public class GestorClientes {
     // Refinar el metodo para que se ajuste a lo pedido en la practica, es decir, que ignore mayusculas y minusculas <- Se encargará el gestor de texto
     public void buscarCliente(String input){
         List<Cliente> resultados = new ArrayList<>();
+        input = input.toLowerCase();
 
         for (Cliente cliente : clientes) {
-            if (cliente.getMatricula().contains(input) || cliente.getNombre().contains(input) || cliente.getTlfn().contains(input)) {
+            if (cliente.getMatricula().toLowerCase().contains(input) ||
+                    cliente.getNombre().toLowerCase().contains(input) ||
+                    cliente.getTlfn().contains(input)) {
                 resultados.add(cliente);
             }
         }

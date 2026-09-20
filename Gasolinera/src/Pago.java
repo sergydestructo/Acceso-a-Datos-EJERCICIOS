@@ -4,13 +4,11 @@ public class Pago implements Comparable<Pago>{
     final private int id;
     final private int idCliente;
     final private Date fecha;
-    final private float importe;
-    final private float litros;
-    final private String combustible;
+    final private Double importe;
+    final private Double litros;
+    final private Combustible combustible;
 
-    // Cambiar constructor para comprobar inputs correctos/corregir decimales
-
-    public Pago(int id, int idCliente, Date fecha, float importe, float litros, String combustible) {
+    public Pago(int id, int idCliente, Date fecha, Double importe, Double litros, Combustible combustible) {
         this.id = id;
         this.idCliente = idCliente;
         this.fecha = fecha;
@@ -41,13 +39,14 @@ public class Pago implements Comparable<Pago>{
     @Override
     public boolean equals(Object o) {
         if (!(o instanceof Pago pago)) return false;
-        return getId() == pago.getId() && getIdCliente() == pago.getIdCliente() && Float.compare(getImporte(), pago.getImporte()) == 0 && Float.compare(getLitros(), pago.getLitros()) == 0 && Objects.equals(getFecha(), pago.getFecha()) && Objects.equals(getCombustible(), pago.getCombustible());
+        return getId() == pago.getId() && getIdCliente() == pago.getIdCliente() && Objects.equals(getFecha(), pago.getFecha()) && Objects.equals(getImporte(), pago.getImporte()) && Objects.equals(getLitros(), pago.getLitros()) && getCombustible() == pago.getCombustible();
     }
 
     @Override
     public int hashCode() {
         return Objects.hash(getId(), getIdCliente(), getFecha(), getImporte(), getLitros(), getCombustible());
     }
+
 
     @Override
     public int compareTo(Pago o) {
@@ -66,15 +65,15 @@ public class Pago implements Comparable<Pago>{
         return fecha;
     }
 
-    public float getImporte() {
+    public Double getImporte() {
         return importe;
     }
 
-    public float getLitros() {
+    public Double getLitros() {
         return litros;
     }
 
-    public String getCombustible() {
+    public Combustible getCombustible() {
         return combustible;
     }
 }
