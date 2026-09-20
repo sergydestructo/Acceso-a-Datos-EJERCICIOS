@@ -44,7 +44,7 @@ public class UI {
                     break;
                 case 0:
                     salir = true;
-                    System.out.println("salir");
+                    System.out.println("Adiooo");
                     break;
                 default:
                     System.out.println("Opción inválida");
@@ -113,12 +113,5 @@ public class UI {
     public void listaPago() {
         System.out.println("LISTADO DE PAGOS\n");
         pagos.listarPagos();
-    }
-
-
-    public static void main(String[] args) {
-        UI prueba = new UI();
-
-        prueba.mostrarMenu();
     }
 }
