@@ -78,7 +78,7 @@ public class UI {
     }
 
     public void altaPago() {
-        if (clientes.existeCliente(1)) {
+        if (clientes.existenClientes()) {
             System.out.println("CLIENTES DISPONIBLES PARA CREAR PAGO");
             clientes.listarClientes();
 

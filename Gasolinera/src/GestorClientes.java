@@ -86,7 +86,7 @@ public class GestorClientes {
         return false;
     }
 
-    private boolean existenClientes() {
+    public boolean existenClientes() {
         return !clientes.isEmpty();
     }
 }

@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Date;
+import java.text.SimpleDateFormat;
 
 public class GestorPagos {
     private List<Pago> pagos;
@@ -23,9 +24,19 @@ public class GestorPagos {
 
     public void mostrarPagos(List<Pago> pagos) {
         pagos.sort(new ComparadorPagosId());
+        SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
 
         for (Pago pago : pagos) {
-            System.out.println(pago);
+            Cliente cliente = gestorClientes.buscarPorId(pago.getIdCliente());
+
+            System.out.println(
+                    "ID: " + pago.getId() +
+                            " CLIENTE: " + cliente.getNombre() +
+                            " FECHA: " + formato.format(pago.getFecha()) +
+                            " IMPORTE: " + pago.getImporte() +
+                            " LITROS: " + pago.getLitros() +
+                            " COMBUSTIBLE: " + pago.getCombustible()
+            );
         }
     }
 
