@@ -1,3 +1,4 @@
+import java.io.IOException;
 import java.util.List;
 
 public interface GestorArchivos {
@@ -9,5 +10,5 @@ public interface GestorArchivos {
 
     public boolean guardarPago();
 
-    public void prepararArchivo();
+    public void prepararArchivo() throws IOException;
 }
