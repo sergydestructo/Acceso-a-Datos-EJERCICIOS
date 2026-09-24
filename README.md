@@ -1,1 +1,1 @@
-# Repositorio de ejerccios - Acceso a Datos
+# Repositorio de ejercicios - Acceso a Datos
