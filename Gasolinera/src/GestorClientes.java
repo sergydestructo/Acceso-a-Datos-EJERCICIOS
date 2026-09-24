@@ -3,16 +3,25 @@ import java.util.List;
 
 public class GestorClientes {
     private List<Cliente> clientes;
-
+    private GestorArchivos gestorArchivos;
 
     // Cuando haya que gestionar lectura y escritura, sopesar si es necesario sobrecargar el constructor o directamente hacerlo distinto (Con un parametro tampoco hay que liarse)
-    public GestorClientes() {
+    public GestorClientes(GestorArchivos gestorArchivos) {
         this.clientes = new ArrayList<Cliente>();
+        this.gestorArchivos = gestorArchivos;
+    }
+
+    public void leerClientes() {
+        this.clientes = gestorArchivos.leerClientes();
     }
 
     public void crearCliente(String nombre, String tlfn, String matricula) {
         if (!existeCliente(matricula)) {
-            clientes.add(new Cliente(clientes.size() + 1, nombre, tlfn, matricula));
+            Cliente cliente = new Cliente(clientes.size() + 1, nombre, tlfn, matricula);
+
+            clientes.add(cliente);
+
+            gestorArchivos.guardarCliente(cliente);
 
             //Llamada a clase gestora de escribir en archivo, se hará más adelante
 

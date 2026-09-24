@@ -1,2 +1,4 @@
-1, Sergio, 11111, 1234ABC;
-2, Iván, 11111, 4321CBA
+Id,Nombre,Teléfono,Matrícula;
+1,Sergio,634021859,1234ABC;
+2,LeBron James,8,NI66ER;
+3,Paula Chikita,630485861,PAP01;

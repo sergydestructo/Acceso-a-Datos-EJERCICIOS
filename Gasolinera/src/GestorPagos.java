@@ -6,16 +6,24 @@ import java.text.SimpleDateFormat;
 public class GestorPagos {
     private List<Pago> pagos;
     private GestorClientes gestorClientes;
+    private GestorArchivos gestorArchivos;
 
-    public GestorPagos(GestorClientes gestorClientes) {
+    public GestorPagos(GestorClientes gestorClientes, GestorArchivos gestorArchivos) {
         this.pagos = new ArrayList<Pago>();
         this.gestorClientes = gestorClientes;
+        this.gestorArchivos = gestorArchivos;
+    }
+
+    public void leerPagos() {
+        this.pagos = gestorArchivos.leerPagos();
     }
 
     public void crearPago(int idCliente, Date fecha, Double importe, Double litros, Combustible combustible) {
-        pagos.add(new Pago(pagos.size() + 1, idCliente, fecha, importe, litros, combustible));
+        Pago pago = new Pago(pagos.size() + 1, idCliente, fecha, importe, litros, combustible);
 
-        //Llamada a clase gestora de escribir en archivo, se hará más adelante
+        pagos.add(pago);
+
+        gestorArchivos.guardarPago(pago);
 
         System.out.println("Pago con identificador " + pagos.size() +
                 "del cliente " + gestorClientes.buscarPorId(idCliente).getNombre() +

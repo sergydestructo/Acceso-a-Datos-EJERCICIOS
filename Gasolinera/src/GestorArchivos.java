@@ -4,11 +4,11 @@ import java.util.List;
 public interface GestorArchivos {
     public List<Cliente> leerClientes();
 
-    public boolean guardarCliente();
+    public void guardarCliente(Cliente cliente);
 
     public List<Pago> leerPagos();
 
-    public boolean guardarPago();
+    public void guardarPago(Pago pago);
 
     public void prepararArchivo() throws IOException;
 }

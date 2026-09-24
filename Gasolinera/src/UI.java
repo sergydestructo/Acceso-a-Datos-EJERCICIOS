@@ -1,19 +1,43 @@
+import java.io.IOException;
 import java.util.Date;
 import java.util.Scanner;
 
 public class UI {
     // Cambiar más adelante por la clase que trate el texto, dicha clase será la que se encargue de utilizar el scanner.
+    private GestorArchivos gestorArchivos;
     final private GestorClientes clientes;
     final private GestorPagos pagos;
     final private GestorTexto input;
 
+
     UI() {
+            this.gestorArchivos = null;
+
+            try {
+                gestorArchivos = new GestorArchivosCSV();
+            } catch (IOException e) {
+                System.out.println("Esto no va ni pagando");
+            }
             this.input = new GestorTexto();
-            this.clientes = new GestorClientes();
-            this.pagos = new GestorPagos(clientes);
+            this.clientes = new GestorClientes(gestorArchivos);
+            this.pagos = new GestorPagos(clientes, gestorArchivos);
+
+    }
+
+    public void leerArchivos() {
+        try {
+            gestorArchivos.prepararArchivo();
+        } catch (IOException e) {
+            System.out.println("No se han podido leer o crear los archivos");
+        }
+
+        clientes.leerClientes();
+        pagos.leerPagos();
     }
 
     public void mostrarMenu() {
+        leerArchivos();
+
         boolean salir = false;
 
         while (!salir) {
