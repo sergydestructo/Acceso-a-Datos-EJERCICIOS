@@ -8,6 +8,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import static java.nio.file.StandardOpenOption.APPEND;
 
+
 public class GestorArchivosCSV implements GestorArchivos {
 
     final private Path directorio = Path.of("datos");
@@ -30,11 +31,11 @@ public class GestorArchivosCSV implements GestorArchivos {
             while ((linea = lector.readLine()) != null) {
                 String[] datosCliente = linea.split(",");
 
-                //replace se usa para quitar el ";" al final de la linea
                 Cliente cliente = new Cliente(
                         Integer.parseInt(datosCliente[0]),
-                        datosCliente[1], datosCliente[2],
-                        datosCliente[3].replace(";", "")
+                        datosCliente[1],
+                        datosCliente[2],
+                        datosCliente[3]
                 );
 
                 clientesLeidos.add(cliente);
@@ -51,13 +52,13 @@ public class GestorArchivosCSV implements GestorArchivos {
         String linea = cliente.getId() + ","
                 + cliente.getNombre() + ","
                 + cliente.getTlfn() + ","
-                + cliente.getMatricula() + ";"
+                + cliente.getMatricula()
                 + System.lineSeparator();
 
         try {
             Files.writeString(clientes, linea, APPEND);
         } catch (IOException e) {
-            System.out.println("No se ha guardao XD");
+            System.out.println("Error al guardar el archivo");
         }
     }
 
@@ -73,7 +74,6 @@ public class GestorArchivosCSV implements GestorArchivos {
             while ((linea = lector.readLine()) != null) {
                 String[] datosPago = linea.split(",");
 
-                //replace se usa para quitar el ";" al final de la linea
                 try {
                     Pago pago = new Pago(
                             Integer.parseInt(datosPago[0]),
@@ -81,7 +81,7 @@ public class GestorArchivosCSV implements GestorArchivos {
                             formatio.parse(datosPago[2]),
                             Double.parseDouble(datosPago[3]),
                             Double.parseDouble(datosPago[4]),
-                            Combustible.valueOf(datosPago[5].replace(";", "").toUpperCase())
+                            Combustible.valueOf(datosPago[5].toUpperCase())
                     );
 
                     pagosLeidos.add(pago);
@@ -99,20 +99,20 @@ public class GestorArchivosCSV implements GestorArchivos {
 
     @Override
     public void guardarPago(Pago pago) {
-        SimpleDateFormat formatio = new SimpleDateFormat("dd/MM/yyyy");
+        SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
 
         String linea = pago.getId() + ","
                 + pago.getIdCliente() + ","
-                + formatio.format(pago.getFecha()) + ","
+                + formato.format(pago.getFecha()) + ","
                 + pago.getImporte() + ","
                 + pago.getLitros() + ","
-                + pago.getCombustible() + ";"
+                + pago.getCombustible()
                 + System.lineSeparator();
 
         try {
             Files.writeString(pagos, linea, APPEND);
         } catch (IOException e) {
-            System.out.println("No se ha guardao XD");
+            System.out.println("Error al guardar el archivo");
         }
     }
 
@@ -122,14 +122,14 @@ public class GestorArchivosCSV implements GestorArchivos {
 
         if (Files.notExists(clientes)) {
             Files.createFile(clientes);
-            String cabecera = "Id,Nombre,Teléfono,Matrícula;" + System.lineSeparator();
+            String cabecera = "Id,Nombre,Teléfono,Matrícula" + System.lineSeparator();
 
             Files.writeString(clientes, cabecera, APPEND);
         }
 
         if (Files.notExists(pagos)) {
             Files.createFile(pagos);
-            String cabecera = "Id,IdCliente,Fecha,Importe,Litros,Combustible;" + System.lineSeparator();
+            String cabecera = "Id,IdCliente,Fecha,Importe,Litros,Combustible" + System.lineSeparator();
 
             Files.writeString(pagos, cabecera, APPEND);
         }
