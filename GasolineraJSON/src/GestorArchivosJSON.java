@@ -18,7 +18,19 @@ public class GestorArchivosJSON implements GestorArchivos{
 
     @Override
     public List<Cliente> leerClientes() {
-        return List.of();
+        List<Cliente> clientesLeidos = new ArrayList<>();
+
+        try (BufferedReader lector = Files.newBufferedReader(clientes)) {
+            String linea;
+
+            while ((linea = lector.readLine()) != null) {
+                System.out.println(linea);
+            }
+        } catch (IOException e) {
+            System.out.println("Error de lectura en el archivo de clientes");
+        }
+
+        return clientesLeidos;
     }
 
     @Override
@@ -85,6 +97,8 @@ public class GestorArchivosJSON implements GestorArchivos{
 
             Files.createFile(clientes);
 
+            // A ver si soy capaz de aprender a escribir bien en formato JSON jeje, locurita
+
             /*  String formatoJSON = "{" + System.lineSeparator()
                     + "\"clientes\": [" + System.lineSeparator()
                     + System.lineSeparator()
@@ -99,6 +113,8 @@ public class GestorArchivosJSON implements GestorArchivos{
         if (Files.notExists(pagos)) {
 
             Files.createFile(pagos);
+
+            // A ver si soy capaz de aprender a escribir bien en formato JSON jeje, locurita
 
             /*
             String formatoJSON = "{[]}";
@@ -115,8 +131,7 @@ public class GestorArchivosJSON implements GestorArchivos{
         try {
             prueba.prepararArchivo();
 
-            Cliente pruebaCliente = new Cliente(1, "sasa", "2312", "abc");
-            prueba.guardarCliente(pruebaCliente);
+            prueba.leerClientes();
 
             Pago pruebaPago = new Pago(1,1,new Date(), 12.12, 12.12, Combustible.valueOf("DIESEL"));
             prueba.guardarPago(pruebaPago);
