@@ -14,7 +14,7 @@ public class UI {
             this.gestorArchivos = null;
 
             try {
-                gestorArchivos = new GestorArchivosCSV();
+                gestorArchivos = new GestorArchivosJSON();
             } catch (IOException e) {
                 System.out.println("Esto no va ni pagando");
             }

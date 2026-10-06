@@ -15,6 +15,11 @@ public class GestorArchivosJSON implements GestorArchivos{
     final private Path clientes = directorio.resolve("clientes.json");
     final private Path pagos = directorio.resolve("pagos.json");
 
+    public GestorArchivosJSON() throws IOException {
+        prepararArchivo();
+    }
+
+
     @Override
     public List<Cliente> leerClientes() {
         List<Cliente> clientesLeidos = new ArrayList<>();
@@ -161,32 +166,6 @@ public class GestorArchivosJSON implements GestorArchivos{
             Files.writeString(pagos, formatoJSON, APPEND);
 
              */
-        }
-    }
-
-    public static void main(String[] args) {
-        GestorArchivos prueba = new GestorArchivosJSON();
-
-        try {
-            prueba.prepararArchivo();
-
-            GestorClientes pruebaLista = new GestorClientes(prueba);
-            pruebaLista.leerClientes();
-
-            pruebaLista.listarClientes();
-
-            Pago pruebaPago = new Pago(1,1,new Date(), 12.12, 12.12, Combustible.valueOf("DIESEL"));
-            prueba.guardarPago(pruebaPago);
-
-            GestorPagos pruebaPagos = new GestorPagos(pruebaLista, prueba);
-            pruebaPagos.leerPagos();
-
-            pruebaPagos.listarPagos();
-
-
-
-        } catch (IOException e) {
-            System.out.println("Petada");
         }
     }
 }
