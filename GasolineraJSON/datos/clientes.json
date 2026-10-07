@@ -1,1 +1,6 @@
-{"id": 1,"nombre": "Sergio2","telefono": "123456789","matricula": "ABC1234"}
+{
+	"clientes": [
+{"id": 1,"nombre": "Sergio","telefono": "12345","matricula": "12345"},
+{"id": 2,"nombre": "Ivan","telefono": "54321","matricula": "54321"}
+	]
+}

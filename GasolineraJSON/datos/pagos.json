@@ -1,0 +1,5 @@
+{
+	"pagos": [
+{"id": 1,"idCliente": 2,"fecha": "07/10/2026","importe": 12.12,"litros": 44.9, "combustible": "DIESEL"}
+	]
+}

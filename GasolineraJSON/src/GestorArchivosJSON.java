@@ -9,11 +9,17 @@ import java.util.List;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import static java.nio.file.StandardOpenOption.APPEND;
+import static java.nio.file.StandardOpenOption.TRUNCATE_EXISTING;
 
 public class GestorArchivosJSON implements GestorArchivos{
     final private Path directorio = Path.of("datos");
     final private Path clientes = directorio.resolve("clientes.json");
     final private Path pagos = directorio.resolve("pagos.json");
+
+
+    final private String comienzoJSONCliente = "{" + System.lineSeparator() + "\t\"clientes\": [" + System.lineSeparator();
+    final private String comienzoJSONPagos = "{" + System.lineSeparator() + "\t\"pagos\": [" + System.lineSeparator();
+    final private String finalJSON = System.lineSeparator() + "\t]" + System.lineSeparator() + "}";
 
     public GestorArchivosJSON() throws IOException {
         prepararArchivo();
@@ -28,6 +34,10 @@ public class GestorArchivosJSON implements GestorArchivos{
             String linea;
 
             while ((linea = lector.readLine()) != null) {
+                if ((linea.length() == 1) || linea.contains("\t")) {
+                    continue;
+                }
+
                 linea = linea.substring(linea.indexOf("{") + 1, linea.indexOf("}"));
                 String[] campos = linea.split(",");
 
@@ -49,22 +59,27 @@ public class GestorArchivosJSON implements GestorArchivos{
 
     @Override
     public void guardarCliente(Cliente cliente) {
-        String linea = "{\"id\": " + cliente.getId()
-                + ",\"nombre\": " + "\"" + cliente.getNombre() + "\""
-                + ",\"telefono\": " + "\"" + cliente.getTlfn() + "\""
-                + ",\"matricula\": " + "\"" + cliente.getMatricula() + "\""
-                + "}";
+        List<Cliente> listaClientes = leerClientes();
+        listaClientes.add(cliente);
+
+        String linea = listaClientes.stream().map(
+                (Cliente c) -> {
+                    return "{\"id\": " + c.getId()
+                            + ",\"nombre\": " + "\"" + c.getNombre() + "\""
+                            + ",\"telefono\": " + "\"" + c.getTlfn() + "\""
+                            + ",\"matricula\": " + "\"" + c.getMatricula() + "\""
+                            + "}";
+                }
+        ).reduce(
+                (String s1, String s2) -> {
+                    return s1 + "," + System.lineSeparator() + s2;
+                }
+        ).orElse("");
 
         try {
-            if (!Files.readString(clientes).isEmpty()) {
-                linea = "," + System.lineSeparator() + linea;
-            }
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-
-        try {
+            Files.writeString(clientes, comienzoJSONCliente, TRUNCATE_EXISTING);
             Files.writeString(clientes, linea, APPEND);
+            Files.writeString(clientes, finalJSON, APPEND);
         } catch (IOException e) {
             System.out.println("Error al guardar el archivo");
         }
@@ -73,26 +88,31 @@ public class GestorArchivosJSON implements GestorArchivos{
 
     @Override
     public void guardarPago(Pago pago) {
+        List<Pago> listaPagos = leerPagos();
+        listaPagos.add(pago);
+
         SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
 
-        String linea = "{\"id\": " + pago.getId()
-                + ",\"idCliente\": " + pago.getIdCliente()
-                + ",\"fecha\": " + "\"" + formato.format(pago.getFecha()) + "\""
-                + ",\"importe\": " + pago.getImporte()
-                + ",\"litros\": " + pago.getLitros()
-                + ", \"combustible\": " + "\"" + pago.getCombustible() + "\""
-                + "}";
+        String linea = listaPagos.stream().map(
+                (Pago p) -> {
+                    return "{\"id\": " + p.getId()
+                            + ",\"idCliente\": " + p.getIdCliente()
+                            + ",\"fecha\": " + "\"" + formato.format(p.getFecha()) + "\""
+                            + ",\"importe\": " + p.getImporte()
+                            + ",\"litros\": " + p.getLitros()
+                            + ", \"combustible\": " + "\"" + p.getCombustible() + "\""
+                            + "}";
+                }
+        ).reduce(
+                (String s1, String s2) -> {
+                    return s1 + "," + System.lineSeparator() + s2;
+                }
+        ).orElse("");
 
         try {
-            if (!Files.readString(pagos).isEmpty()) {
-                linea = "," + System.lineSeparator() + linea;
-            }
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-
-        try {
+            Files.writeString(pagos, comienzoJSONPagos, TRUNCATE_EXISTING);
             Files.writeString(pagos, linea, APPEND);
+            Files.writeString(pagos, finalJSON, APPEND);
         } catch (IOException e) {
             System.out.println("Error al guardar el archivo");
         }
@@ -107,6 +127,10 @@ public class GestorArchivosJSON implements GestorArchivos{
             SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
 
             while ((linea = lector.readLine()) != null) {
+                if (linea.length() == 1 || linea.contains("\t")) {
+                    continue;
+                }
+
                 linea = linea.substring(linea.indexOf("{") + 1, linea.indexOf("}"));
                 String[] campos = linea.split(",");
 
