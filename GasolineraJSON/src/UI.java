@@ -18,19 +18,13 @@ public class UI {
             } catch (IOException e) {
                 System.out.println("Esto no va ni pagando");
             }
+
             this.input = new GestorTexto();
             this.clientes = new GestorClientes(gestorArchivos);
             this.pagos = new GestorPagos(clientes, gestorArchivos);
-
     }
 
     public void leerArchivos() {
-        try {
-            gestorArchivos.prepararArchivo();
-        } catch (IOException e) {
-            System.out.println("No se han podido leer o crear los archivos");
-        }
-
         clientes.leerClientes();
         pagos.leerPagos();
     }

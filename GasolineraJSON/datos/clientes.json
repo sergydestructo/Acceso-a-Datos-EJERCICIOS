@@ -1,6 +1,7 @@
 {
 	"clientes": [
-{"id": 1,"nombre": "Sergio","telefono": "12345","matricula": "12345"},
-{"id": 2,"nombre": "Ivan","telefono": "54321","matricula": "54321"}
+{"id": 1,"nombre": "Sergio","telefono": "123456789","matricula": "1234ABC"},
+{"id": 2,"nombre": "Iván","telefono": "987654321","matricula": "4321CBA"},
+{"id": 3,"nombre": "Paula","telefono": "192837465","matricula": "PAPOI"}
 	]
 }

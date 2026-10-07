@@ -22,7 +22,6 @@ public class GestorArchivosJSON implements GestorArchivos{
     final private String finalJSON = System.lineSeparator() + "\t]" + System.lineSeparator() + "}";
 
     public GestorArchivosJSON() throws IOException {
-        prepararArchivo();
     }
 
 
@@ -164,33 +163,20 @@ public class GestorArchivosJSON implements GestorArchivos{
         if (Files.notExists(clientes)) {
 
             Files.createFile(clientes);
-
-            // A ver si soy capaz de aprender a escribir bien en formato JSON jeje, locurita
-
-            /*  String formatoJSON = "{" + System.lineSeparator()
-                    + "\"clientes\": [" + System.lineSeparator()
-                    + System.lineSeparator()
-                    + "]" + System.lineSeparator()
-                    + "}" + System.lineSeparator();
-
-            Files.writeString(clientes, formatoJSON, APPEND);
-
-           */
         }
 
         if (Files.notExists(pagos)) {
 
             Files.createFile(pagos);
-
-            // A ver si soy capaz de aprender a escribir bien en formato JSON jeje, locurita
-
-            /*
-            String formatoJSON = "{[]}";
-
-            Files.writeString(pagos, formatoJSON, APPEND);
-
-             */
         }
+    }
+
+    public Path getClientes() {
+        return clientes;
+    }
+
+    public Path getPagos() {
+        return pagos;
     }
 }
 

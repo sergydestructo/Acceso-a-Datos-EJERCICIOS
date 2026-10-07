@@ -1,4 +1,5 @@
 import java.io.IOException;
+import java.nio.file.Path;
 import java.util.List;
 
 public interface GestorArchivos {
@@ -11,4 +12,8 @@ public interface GestorArchivos {
     public void guardarPago(Pago pago);
 
     public void prepararArchivo() throws IOException;
+
+    Path getClientes();
+
+    Path getPagos();
 }

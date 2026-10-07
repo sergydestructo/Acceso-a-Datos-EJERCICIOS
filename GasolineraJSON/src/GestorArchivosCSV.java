@@ -11,9 +11,9 @@ import static java.nio.file.StandardOpenOption.APPEND;
 
 public class GestorArchivosCSV implements GestorArchivos {
 
-    final private Path directorio = Path.of("datos");
-    final private Path clientes = directorio.resolve("clientes.csv");
-    final private Path pagos = directorio.resolve("pagos.csv");
+    private Path directorio = Path.of("datos");
+    private Path clientes = directorio.resolve("clientes.csv");
+    private Path pagos = directorio.resolve("pagos.csv");
 
     public GestorArchivosCSV() throws IOException {
         prepararArchivo();
@@ -133,6 +133,31 @@ public class GestorArchivosCSV implements GestorArchivos {
 
             Files.writeString(pagos, cabecera, APPEND);
         }
+    }
+
+    @Override
+    public Path getClientes() {
+        return clientes;
+    }
+
+    @Override
+    public Path getPagos() {
+        return pagos;
+    }
+
+    public void setDirectorio(Path directorio) {
+        this.directorio = directorio;
+
+        setClientes(directorio.resolve("clientes.csv"));
+        setPagos(directorio.resolve("pagos.csv"));
+    }
+
+    public void setClientes(Path clientes) {
+        this.clientes = clientes;
+    }
+
+    public void setPagos(Path pagos) {
+        this.pagos = pagos;
     }
 }
 
