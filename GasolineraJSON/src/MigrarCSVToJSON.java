@@ -26,7 +26,7 @@ public class MigrarCSVToJSON {
 
     public void migracion() {
         if (Files.notExists(gestorArchivosJSON.getClientes()) && Files.notExists(gestorArchivosJSON.getPagos())) {
-            System.out.print("¿Desea migrar datos CSV a JSON? (S/n): ");
+            System.out.print("¿Desea migrar datos CSV a JSON? (Y/n): ");
             String input;
 
             do {
