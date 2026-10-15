@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel target="21">
+      <module name="Ficheros_binarios_con_Java" target="27" />
+      <module name="Ficheros_binarios_con_Java.main" target="27" />
+      <module name="Ficheros_binarios_con_Java.test" target="27" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

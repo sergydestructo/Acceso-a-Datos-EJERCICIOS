@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Tests" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-10-15T22:22:01.364Z" hostname="bof" time="0.049">
+  <properties/>
+  <testcase name="apartadoA()" classname="Tests" time="0.02"/>
+  <testcase name="apartadoB()" classname="Tests" time="0.003"/>
+  <testcase name="apartadoC()" classname="Tests" time="0.002"/>
+  <testcase name="apartadoD()" classname="Tests" time="0.004"/>
+  <testcase name="apartadoE()" classname="Tests" time="0.002"/>
+  <testcase name="apartadoF()" classname="Tests" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,82 @@
+type: edu
+custom_name: PriorityQueue
+files:
+  - name: src/EjerciciosPriorityQueue.java
+    visible: true
+    placeholders:
+      - offset: 308
+        length: 10
+        placeholder_text: return 0L;
+        initial_state:
+          length: 10
+          offset: 308
+        initialized_from_dependency: false
+        encrypted_possible_answer: 1cwBLVjsWcFHiY9Luuci1KcE3Lnwbg4qZrhXbSxVHashyi9hfPzGGiB5SAW15urx
+        selected: false
+        status: Unchecked
+      - offset: 417
+        length: 12
+        placeholder_text: return null;
+        initial_state:
+          length: 12
+          offset: 417
+        initialized_from_dependency: false
+        encrypted_possible_answer: bBuBwmMS31pAntkx2HropGtXK4znY2yBzFMeMaJfK6uXaD+bBiHkmDOxqpdYaHI4+dzkxRKWORVMWW/F+W4jNB04taH7ORS638sbeud9AzqZxlYOkoPYLpvW/dy59Rp0+lWUi46PPLyvFGFWk3BkKHjVv1EDX9fm+tHRa2+jRyaWRQUEMpvrnYwZYK5Vn4AO
+        selected: false
+        status: Unchecked
+      - offset: 516
+        length: 12
+        placeholder_text: return null;
+        initial_state:
+          length: 12
+          offset: 516
+        initialized_from_dependency: false
+        encrypted_possible_answer: bBuBwmMS31pAntkx2HropMhbdexqwqXmJLRIJDCaYseB4Q8bB2rzu9qQ8JJ9eNc17CpvwjJteSCYwTo0eMfT1fKIyQ8n2szUWGoL9uuWe2E=
+        selected: false
+        status: Unchecked
+      - offset: 609
+        length: 10
+        placeholder_text: return 0L;
+        initial_state:
+          length: 10
+          offset: 609
+        initialized_from_dependency: false
+        encrypted_possible_answer: bBuBwmMS31pAntkx2HropMhbdexqwqXmJLRIJDCaYse7GKtee33J5sIhubsCUYTD6o0hOGysQ2tqIw4/3YsopeVRlPoWgmr5cgHvqnUr9DA=
+        selected: false
+        status: Unchecked
+      - offset: 701
+        length: 12
+        placeholder_text: return null;
+        initial_state:
+          length: 12
+          offset: 701
+        initialized_from_dependency: false
+        encrypted_possible_answer: bBuBwmMS31pAntkx2HropDZ8ewelwAJvyJ22TcrTv240UDsyGV3k6UPPyb1WyfFJThRxIk9oHQiISS66PF/0xVsXlNHfYCAIv3ho8rbkQmJSispBfhmwK00yTjgcJ6yJN2Bd4DXp+OhV/B5BfKgaDaGfzAkIFgc/So9XXUP99+NhFfItLY7qnQ4CDAFu1k0Mu6Tfg89TBaSYDp9wY0IbCgEk9w837FWV6Ra4/eoNvVltf4OfPsUUKK0BClROjRtCbeG+vW/5SyxzUUArw+SCcXyfNNxCLatkRYHYE/JySJplUfpJ/NfbGS1N8Jt5Yov+ooaUv7FB3v+g92GhOkKVx32EgMwsSEyOi0AlBmbQmKrrckD7k3vkr1YjLXYQYqosi/HxVXdQ/xTbraBeKPtMHA==
+        selected: false
+        status: Unchecked
+      - offset: 794
+        length: 10
+        placeholder_text: return 0L;
+        initial_state:
+          length: 10
+          offset: 794
+        initialized_from_dependency: false
+        encrypted_possible_answer: bBuBwmMS31pAntkx2HropMhbdexqwqXmJLRIJDCaYseB4Q8bB2rzu9qQ8JJ9eNc1d5vcmb0TxP3uNxVJmDpZBlj+7DZ1MwECmwnMXlSeMCvIjZNbmZ6fauAyPs0jwgF+
+        selected: false
+        status: Unchecked
+      - offset: 901
+        length: 12
+        placeholder_text: return null;
+        initial_state:
+          length: 12
+          offset: 901
+        initialized_from_dependency: false
+        encrypted_possible_answer: bBuBwmMS31pAntkx2HropG2v801w9TW+w9giA1atNjHc6lk2dmDtDcefmq236si2D3vJbNdPyciduscXZrj+081MfVJnw+IWVUqOn3LWMC1Vay4NmH+ZZPnSdDO91gzCAc41pktUuyGCATKNIOAyLR7f7Xs33xO5vM4K2n5uwfZLOCnYRlJemJzT2zQ15aS/NiXSPWu0Ot++ShjG4bMwOkkrDmd69o+v7sANP6PXJgg=
+        selected: false
+        status: Unchecked
+    learner_created: false
+  - name: test/Tests.java
+    visible: false
+    learner_created: false
+status: Unchecked
+record: -1

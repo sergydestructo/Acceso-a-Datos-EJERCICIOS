@@ -1,0 +1,85 @@
+type: edu
+custom_name: LinkedHashSet
+files:
+  - name: src/EjerciciosLinkedHashSet.java
+    visible: true
+    placeholders:
+      - offset: 297
+        length: 44
+        placeholder_text: return "TODO";
+        initial_state:
+          length: 14
+          offset: 297
+        initialized_from_dependency: false
+        encrypted_possible_answer: rabbuAl00Z4nxwoEdbGvCyFe7pYqeJkDp50QIFPPalGhSntrXdsSvf/0wLNFcgQN
+        selected: true
+        status: Solved
+      - offset: 449
+        length: 151
+        placeholder_text: return null;
+        initial_state:
+          length: 12
+          offset: 419
+        initialized_from_dependency: false
+        encrypted_possible_answer: 3AGXhn3znEs1t5nlw/GsjK3oSrfMU2mpIIr0M2m8feszefaOTULBj3EdlgoMk9JlJDK4Wb48q4TGcUtbYt6NovrlJSEsChh8NPpRbY8OtePjSZNOpn4rq9Uy9mkPdRM2YRznHIjAhKKee9o9LDXCAA==
+        selected: true
+        status: Solved
+      - offset: 698
+        length: 140
+        placeholder_text: return null;
+        initial_state:
+          length: 12
+          offset: 529
+        initialized_from_dependency: false
+        encrypted_possible_answer: 3AGXhn3znEs1t5nlw/GsjK4dRvsfZUoRLMpTLiEvv2JCZI21tnjCZVwwVOSG+1qovSWjg3ZlxaEHJHAYxkuWNR6leQtfuFOThAelPsbw4+6zKBI4ZYl3wxnHp52f08go+fFzVaoPpO+GZxalzSWcRA==
+        selected: true
+        status: Solved
+      - offset: 918
+        length: 101
+        placeholder_text: return 0;
+        initial_state:
+          length: 9
+          offset: 621
+        initialized_from_dependency: false
+        encrypted_possible_answer: 3AGXhn3znEs1t5nlw/GsjK4dRvsfZUoRLMpTLiEvv2KkxLkxotWs4hoV8Fun/aNGSmyQdqzkadzRm3FWLzTd2EbdcEBgiJ4TZ8eJA5aOtv4=
+        selected: true
+        status: Solved
+      - offset: 1101
+        length: 166
+        placeholder_text: return null;
+        initial_state:
+          length: 12
+          offset: 712
+        initialized_from_dependency: false
+        encrypted_possible_answer: 3AGXhn3znEs1t5nlw/GsjLvSNJ1iQDfKY1B5Wjaqr75kcOwvxpH8/QREjUhIyqE2wP/p5LSWUSNRbg1d6rg+o4UCUtDpnj0qoRYYww4AvjhsGXQIX5Jnv0ocHC3KXJmy
+        selected: true
+        status: Solved
+      - offset: 1350
+        length: 184
+        placeholder_text: return null;
+        initial_state:
+          length: 12
+          offset: 807
+        initialized_from_dependency: false
+        encrypted_possible_answer: 3AGXhn3znEs1t5nlw/GsjK4dRvsfZUoRLMpTLiEvv2LYwyZuh+LMJ9wU6Z4vThF2GaBlNy1NHh/GWD0Sug0X4ch8woo1E6rspwHM5Z4RlBBNBd/d1Gu3KV6DJrBU2Jht
+        selected: true
+        status: Solved
+      - offset: 1631
+        length: 168
+        placeholder_text: return null;
+        initial_state:
+          length: 12
+          offset: 916
+        initialized_from_dependency: false
+        encrypted_possible_answer: 3AGXhn3znEs1t5nlw/GsjBJdOtQZXqUoGtSzwpOV0ebCdDhN82DNqOYFw8Dy9P33oGKnA2aYBasOtPGKMNBCEOZ0iD94E8elsurrTCIKBsVBYVnt2LzPCHTzzKLigkHdKGwYPLjgzbpD3PCSfWRTK8O7QhgmmYt8G/zPHrttEdM=
+        selected: true
+        status: Solved
+    learner_created: false
+  - name: test/Tests.java
+    visible: false
+    learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Thu, 15 Oct 2026 21:55:58 UTC"
+record: -1

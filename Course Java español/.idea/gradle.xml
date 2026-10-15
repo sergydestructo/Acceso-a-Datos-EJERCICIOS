@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="delegatedBuild" value="false" />
+        <option name="distributionType" value="WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/cuaderno/01_ArrayList" />
+            <option value="$PROJECT_DIR$/cuaderno/02_LinkedList" />
+            <option value="$PROJECT_DIR$/cuaderno/03_LinkedHashSet" />
+            <option value="$PROJECT_DIR$/cuaderno/04_HashMap" />
+            <option value="$PROJECT_DIR$/cuaderno/05_TreeMap" />
+            <option value="$PROJECT_DIR$/cuaderno/06_HashSet" />
+            <option value="$PROJECT_DIR$/cuaderno/07_TreeSet" />
+            <option value="$PROJECT_DIR$/cuaderno/08_PriorityQueue" />
+            <option value="$PROJECT_DIR$/cuaderno/09_ArrayDeque" />
+            <option value="$PROJECT_DIR$/cuaderno/10_LinkedHashMap" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

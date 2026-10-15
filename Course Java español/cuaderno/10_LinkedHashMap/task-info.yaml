@@ -1,0 +1,82 @@
+type: edu
+custom_name: LinkedHashMap
+files:
+  - name: src/EjerciciosLinkedHashMap.java
+    visible: true
+    placeholders:
+      - offset: 314
+        length: 10
+        placeholder_text: return 0L;
+        initial_state:
+          length: 10
+          offset: 314
+        initialized_from_dependency: false
+        encrypted_possible_answer: hvsT2pRioSIIKE5QxahW1eyjYwYkSfG09/f1vT5l9WqMaasx2wy0/EyVkOL5H4kw
+        selected: false
+        status: Unchecked
+      - offset: 437
+        length: 12
+        placeholder_text: return null;
+        initial_state:
+          length: 12
+          offset: 437
+        initialized_from_dependency: false
+        encrypted_possible_answer: /eg7Ytg3KTs9TPEPfM1yXm9Zb3hmEGqYxcu1Gek/55n3hGQKV0wrNrkYo4NKqlxpOuLf/C/tbvxe4Cexwzu3S9vv5VkUpAQKfdkh3aFKOMNg7zQ9UvdWZ82hRdWmUuOHDDPlx1aAexJYnL78l786PJlI32goIWjl2azvEr/zJlKX4M+/s5i6UKX8Cw4UEvjwSDF1KpIhEBDjRFsdbfri4g==
+        selected: false
+        status: Unchecked
+      - offset: 550
+        length: 12
+        placeholder_text: return null;
+        initial_state:
+          length: 12
+          offset: 550
+        initialized_from_dependency: false
+        encrypted_possible_answer: /h80CsHiwXYLNNmFF85icObKMpVPEew2mn9B9tqvf8zZyexMk7p9sZjuxEfUBJl5vanjWe4PGjBfistAH9xc/kBLUCKVBTV8ikwc9D7cgfzvaBIZphFnvzUOxVzAUybJ
+        selected: false
+        status: Unchecked
+      - offset: 657
+        length: 10
+        placeholder_text: return 0L;
+        initial_state:
+          length: 10
+          offset: 657
+        initialized_from_dependency: false
+        encrypted_possible_answer: /h80CsHiwXYLNNmFF85icObKMpVPEew2mn9B9tqvf8zZyexMk7p9sZjuxEfUBJl5QpDG3LkCs4OGBw3J20Tdv27Zrnt33XYHCRHRb0Rpgfs=
+        selected: false
+        status: Unchecked
+      - offset: 789
+        length: 12
+        placeholder_text: return null;
+        initial_state:
+          length: 12
+          offset: 789
+        initialized_from_dependency: false
+        encrypted_possible_answer: /eg7Ytg3KTs9TPEPfM1yXm9Zb3hmEGqYxcu1Gek/55n8sbh3r2erBT6b9jlIKpi8Zt81xMQsx0VUpleEhSteNbScH1B29+a/XDNvNcmaz8TvYp1bE0C88VN5ZGQlNVVEkZyXaQe36VdLlESYSb3nkWREXTVz+Yb160IKWUrgaSYmzZySk2EPHWWh/QkvrPpceKEaaP+LFKWKJHNCybp2TKeMFqleCgSo08NiyVmwXHAAhR5FdaTTbuU/3jbgq5hidRM9HSprCwSka31Zh/ONEAwKspuoZMtO5QtmogNwEaQ=
+        selected: false
+        status: Unchecked
+      - offset: 896
+        length: 10
+        placeholder_text: return 0L;
+        initial_state:
+          length: 10
+          offset: 896
+        initialized_from_dependency: false
+        encrypted_possible_answer: /h80CsHiwXYLNNmFF85icObKMpVPEew2mn9B9tqvf8zZyexMk7p9sZjuxEfUBJl5vanjWe4PGjBfistAH9xc/qUCCYBVcvoaRvtEBz4LBwWWldc8yC7R4csZJIUBiYFX
+        selected: false
+        status: Unchecked
+      - offset: 1032
+        length: 12
+        placeholder_text: return null;
+        initial_state:
+          length: 12
+          offset: 1032
+        initialized_from_dependency: false
+        encrypted_possible_answer: /eg7Ytg3KTs9TPEPfM1yXm9Zb3hmEGqYxcu1Gek/55kwwgrJOKsSD5OQqIUv4g6TPw0L7WpygtB1quJZTMBn4prYavp7IiCSJlpPApCl6rhGJnh3a7yUHqe0nFVWW1VhXMkOkXomR6y/qa46YOsg7ZHgwVcL9PNU+M5w1mYJeZqF9nR7WdZVbn4IywduXR1chX24IUnsqa1UiKKgPKFfXmgJCzsF/IuQDTbIcnOxOctbqXIRnV+gISW5oO6O9QdAmwiniLs5F831pojP7qtKAA==
+        selected: false
+        status: Unchecked
+    learner_created: false
+  - name: test/Tests.java
+    visible: false
+    learner_created: false
+status: Unchecked
+record: -1

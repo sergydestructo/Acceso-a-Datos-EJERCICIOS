@@ -1,0 +1,19 @@
+type: marketplace
+title: Programación funcional y colecciones en Java
+language: Spanish
+summary: "Diez colecciones Java y 60 ejercicios de map, filter y reduce con comprobació\
+  n en el IDE."
+programming_language: Java
+content:
+  - cuaderno
+additional_files:
+  - name: build.gradle.kts
+  - name: settings.gradle.kts
+  - name: gradle.properties
+  - name: gradle/wrapper/gradle-wrapper.properties
+  - name: LICENSE-template
+mode: Study
+environment_settings:
+  jvm_language_level: JDK_21
+  gradle_version: 9.8.0
+yaml_version: 6

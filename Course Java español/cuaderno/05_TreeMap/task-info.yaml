@@ -1,0 +1,82 @@
+type: edu
+custom_name: TreeMap
+files:
+  - name: src/EjerciciosTreeMap.java
+    visible: true
+    placeholders:
+      - offset: 286
+        length: 11
+        placeholder_text: return 0.0;
+        initial_state:
+          length: 11
+          offset: 286
+        initialized_from_dependency: false
+        encrypted_possible_answer: SP7ny+RTBZYCT5N9wkadMnSPt/hc8dDedvs8NLFYZDGrIVmTp7q1g713oAs1S8LoTkLkN7bZY8lRlrM2iaA56w==
+        selected: false
+        status: Unchecked
+      - offset: 412
+        length: 12
+        placeholder_text: return null;
+        initial_state:
+          length: 12
+          offset: 412
+        initialized_from_dependency: false
+        encrypted_possible_answer: eoHIyu6KSv1XY2eSUvUNC7D1aJv72l8aJEi1Kt1J337CTcOJtNvJ74BBmOrLYBJs1haz+ow+noZ3vNVNLa/VyzGZSl68kfbrg2Kj1pFObC6QOoCIr4Ss4CJrFB6hYbazFM7wb+idPJnWNLcPHYfSfPIZsa2yd5cQ+Jb8UflAXn09J1Pang7lhwfyCxvlKuZ5zFeEriMj2ffJWizZFtJ8mw==
+        selected: false
+        status: Unchecked
+      - offset: 529
+        length: 12
+        placeholder_text: return null;
+        initial_state:
+          length: 12
+          offset: 529
+        initialized_from_dependency: false
+        encrypted_possible_answer: eoHIyu6KSv1XY2eSUvUNC9EOVcnaNs7oKgnzN9tkXroBEj7AWNKilklpx5ESxvyIeW65sLfAjh5zkPL1P5sQyjfgtqUxPasofjChj4KjUvLrKOupSK3Wk+v5tH+RXY9V
+        selected: false
+        status: Unchecked
+      - offset: 640
+        length: 11
+        placeholder_text: return 0.0;
+        initial_state:
+          length: 11
+          offset: 640
+        initialized_from_dependency: false
+        encrypted_possible_answer: eoHIyu6KSv1XY2eSUvUNC9EOVcnaNs7oKgnzN9tkXroBEj7AWNKilklpx5ESxvyINqeFmOvp6tNiU9bO6t6jwSqP5i6hr2UlaqsZcECy1rxkFzLwzWqfPIOfjfLx8JjQ
+        selected: false
+        status: Unchecked
+      - offset: 777
+        length: 12
+        placeholder_text: return null;
+        initial_state:
+          length: 12
+          offset: 777
+        initialized_from_dependency: false
+        encrypted_possible_answer: eoHIyu6KSv1XY2eSUvUNC7D1aJv72l8aJEi1Kt1J334dxl1jJW0AeVCYNecQq5bhlDIUdWXWCAUb+/7wbRVJ5/Bqgn5Z34Un5SpJLr3XGzdTmEaU7ymZDc81rx8MtqGqlH/DKYbRiVSGytAEPuXduQb1msuaQXgK570cTs+stwDH7n8Wd6DpHAvuA0+tDTcADObAMTxuYIsobH/EOy1PsPYcOhzv9XhdqtPINWUXjNT1+9JNyltEko8B1ega0MFvOYmhQkhl8/ggX1xR0UvKyVF8whON/qE72qAyRUoHB7uj0NfrVe6N2q/aeQBVMH4tJ/kVpibqIV3rsL/FtoRe3w==
+        selected: false
+        status: Unchecked
+      - offset: 888
+        length: 11
+        placeholder_text: return 0.0;
+        initial_state:
+          length: 11
+          offset: 888
+        initialized_from_dependency: false
+        encrypted_possible_answer: eoHIyu6KSv1XY2eSUvUNC9EOVcnaNs7oKgnzN9tkXroBEj7AWNKilklpx5ESxvyIeW65sLfAjh5zkPL1P5sQyuZpw+p+v8QKZrLSWnSFyYrvLVUEx76Cj8tLqfo/Y13rib3ykJ2oJvwGlu5lL+Uo5w==
+        selected: false
+        status: Unchecked
+      - offset: 1023
+        length: 12
+        placeholder_text: return null;
+        initial_state:
+          length: 12
+          offset: 1023
+        initialized_from_dependency: false
+        encrypted_possible_answer: eoHIyu6KSv1XY2eSUvUNC7D1aJv72l8aJEi1Kt1J336OEqoJyBcfuEbq9lTNUmxTWOK6HvL3b1Ub/hIXJFNlgn/KhGTUi2an7VE9U5T2zsIXJfG6VhAK9T0nKs5aP4J8/KQ1snmy2w3b523ohRHldfpkWdG/MBw1/U/7uXEB1iXLki5SQsOBeL0nYa+e5UjYNP4VfZTwsXoI2CZs6xURO0rt3vRfg3HsO3KOWGz9PW7jIwNmL32mO+5oLgUPBcErRJDx382ETKZPdLhTCuNOT9UPGagRU5fuPIwaxN7zuS0=
+        selected: false
+        status: Unchecked
+    learner_created: false
+  - name: test/Tests.java
+    visible: false
+    learner_created: false
+status: Unchecked
+record: -1

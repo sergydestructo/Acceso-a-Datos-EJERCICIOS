@@ -1,0 +1,82 @@
+type: edu
+custom_name: ArrayDeque
+files:
+  - name: src/EjerciciosArrayDeque.java
+    visible: true
+    placeholders:
+      - offset: 357
+        length: 11
+        placeholder_text: return 0.0;
+        initial_state:
+          length: 11
+          offset: 357
+        initialized_from_dependency: false
+        encrypted_possible_answer: 4KhtD2k4qAQ6nzaH/BhjGEAoUYx3Xckj44Z6Hwh28dGGIbxMSvF+4ESLUIj6ulFi
+        selected: false
+        status: Unchecked
+      - offset: 476
+        length: 12
+        placeholder_text: return null;
+        initial_state:
+          length: 12
+          offset: 476
+        initialized_from_dependency: false
+        encrypted_possible_answer: 2dx3IjYtTzF1fqQAKfQVTnYIb0jFAEYiBOyMciRxohVS8Y8ifKngM+bmRn4ilY3qGTKEsWQRckqPMwUdPaxg50XAMbqk2qSSaMKBwNCP9SO6Gvl37EsGr7aw9PJ5hZJt
+        selected: false
+        status: Unchecked
+      - offset: 586
+        length: 12
+        placeholder_text: return null;
+        initial_state:
+          length: 12
+          offset: 586
+        initialized_from_dependency: false
+        encrypted_possible_answer: 2dx3IjYtTzF1fqQAKfQVTpmGWE/ue1VF2huLAxPaEyPK5TKjyrgrguyjIYWrLnWrtwawfzFlQRXwg1JGDHqw9GOzPZtkf2KuZ50y5FlejOIfnKv8+D4zwwcdYnFpZkE0
+        selected: false
+        status: Unchecked
+      - offset: 688
+        length: 10
+        placeholder_text: return 0L;
+        initial_state:
+          length: 10
+          offset: 688
+        initialized_from_dependency: false
+        encrypted_possible_answer: 2dx3IjYtTzF1fqQAKfQVTpmGWE/ue1VF2huLAxPaEyN4jincM4GT2Q1IAe31byt7aar87FX9+rtV0xsOkX9qZx5zpNbla8kT2JyKxyQLfJNK4v2KpGaNCQyyuaME1HXp
+        selected: false
+        status: Unchecked
+      - offset: 798
+        length: 12
+        placeholder_text: return null;
+        initial_state:
+          length: 12
+          offset: 798
+        initialized_from_dependency: false
+        encrypted_possible_answer: 2dx3IjYtTzF1fqQAKfQVTvwMvzbh6fbEe/gKOcqRKP5WnK0oIMr9Phd8dpC8w42uLghfT9yTukxpTCUkbPkdlKh3GbV5XRiHgnol6y2rL7t6VFO6HKjyy+6Vp4V+Yd6kTHCP+LHmWQOFVwuz/9AVLnlNF2pyVV5j3LYMYMdW1l9JlKSNHvdMno6ekgX9W5xy/Ur6dFaMRlKb+1+ta0+pCg==
+        selected: false
+        status: Unchecked
+      - offset: 902
+        length: 11
+        placeholder_text: return 0.0;
+        initial_state:
+          length: 11
+          offset: 902
+        initialized_from_dependency: false
+        encrypted_possible_answer: 2dx3IjYtTzF1fqQAKfQVTnYIb0jFAEYiBOyMciRxohXVgbSjDIicZv7XJLG7JIo5LE/wfznEo2JGmHLL/E50sQk9IaR8ohe6Cxu6oHjxGwSp6KQRWWOIhz1n6s7vIbL4
+        selected: false
+        status: Unchecked
+      - offset: 1025
+        length: 12
+        placeholder_text: return null;
+        initial_state:
+          length: 12
+          offset: 1025
+        initialized_from_dependency: false
+        encrypted_possible_answer: 2dx3IjYtTzF1fqQAKfQVTvLPSNWEMu7GZrFfMioBpcOFtzLvrIx7R7fy1aeDCdd26xaoeAJCtIK1hV3kP/n66XOPpA/wyV4O7U+EBXJ5av1awJXQmCaL770WHIWm52JsSFZfC8s/MpvZmGNs0wVy7g==
+        selected: false
+        status: Unchecked
+    learner_created: false
+  - name: test/Tests.java
+    visible: false
+    learner_created: false
+status: Unchecked
+record: -1
