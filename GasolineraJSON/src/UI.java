@@ -1,9 +1,7 @@
 import java.io.IOException;
 import java.util.Date;
-import java.util.Scanner;
 
 public class UI {
-    // Cambiar más adelante por la clase que trate el texto, dicha clase será la que se encargue de utilizar el scanner.
     private GestorArchivos gestorArchivos;
     final private GestorClientes clientes;
     final private GestorPagos pagos;

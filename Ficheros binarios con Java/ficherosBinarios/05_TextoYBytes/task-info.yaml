@@ -1,0 +1,55 @@
+type: edu
+custom_name: 5. Texto y bytes UTF-8
+files:
+  - name: src/Main.java
+    visible: true
+    placeholders:
+      - offset: 251
+        length: 38
+        placeholder_text: "new byte[0] /* TODO: codificar texto */"
+        initial_state:
+          length: 39
+          offset: 251
+        initialized_from_dependency: false
+        encrypted_possible_answer: MT6QkPYgmnNGjRSkapMp2xFTvFzL/ViB7HWQ4PD/spvuVDs7PTaP8s1Snk4VVJk4
+        selected: true
+        status: Solved
+      - offset: 291
+        length: 33
+        placeholder_text: "// TODO: guardar los bytes"
+        initial_state:
+          length: 26
+          offset: 300
+        initialized_from_dependency: false
+        encrypted_possible_answer: 42zzM4slLg7kQ90bL/Hi2lfGYgrCTMUNVIbDIP3kkGA=
+        selected: false
+        status: Solved
+      - offset: 354
+        length: 24
+        placeholder_text: "new byte[0] /* TODO: recuperar los bytes */"
+        initial_state:
+          length: 43
+          offset: 356
+        initialized_from_dependency: false
+        encrypted_possible_answer: wZBjMAjzyDSnNkxWiI/nwy78+XpHR24gC08eqGIBKEA=
+        selected: true
+        status: Solved
+      - offset: 395
+        length: 47
+        placeholder_text: "\"\" /* TODO: decodificar recuperados */"
+        initial_state:
+          length: 38
+          offset: 416
+        initialized_from_dependency: false
+        encrypted_possible_answer: zcHXzWC6VvN+WvFUfC2MQXrSSOwtHzCJEtS6B8POgbZxIMvW+pH4BAgmIfenTBaj
+        selected: false
+        status: Solved
+    learner_created: false
+  - name: test/Tests.java
+    visible: false
+    learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Thu, 15 Oct 2026 16:09:39 UTC"
+record: -1

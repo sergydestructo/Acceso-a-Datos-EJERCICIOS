@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Tests" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-15T16:25:44.454Z" hostname="bof" time="0.054">
+  <properties/>
+  <testcase name="recursoIncluidoTieneLosValoresDelEjemplo()" classname="Tests" time="0.035"/>
+  <testcase name="ficheroIncompletoNoEsClienteValido()" classname="Tests" time="0.005"/>
+  <testcase name="leeDistintosClientesYConservaOrigen()" classname="Tests" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

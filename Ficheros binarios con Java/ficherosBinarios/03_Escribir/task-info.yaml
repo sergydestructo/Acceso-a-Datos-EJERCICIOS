@@ -1,0 +1,25 @@
+type: edu
+custom_name: 3. Escribir un fichero binario
+files:
+  - name: src/Main.java
+    visible: true
+    placeholders:
+      - offset: 189
+        length: 25
+        placeholder_text: "// TODO: guardar datos en ruta"
+        initial_state:
+          length: 30
+          offset: 189
+        initialized_from_dependency: false
+        encrypted_possible_answer: 42zzM4slLg7kQ90bL/Hi2lfGYgrCTMUNVIbDIP3kkGA=
+        selected: true
+        status: Solved
+    learner_created: false
+  - name: test/Tests.java
+    visible: false
+    learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Thu, 15 Oct 2026 15:51:30 UTC"
+record: -1
