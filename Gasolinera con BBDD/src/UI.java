@@ -2,21 +2,14 @@ import java.io.IOException;
 import java.util.Date;
 
 public class UI {
-    private GestorArchivos gestorArchivos;
+    final private GestorArchivos gestorArchivos;
     final private GestorClientes clientes;
     final private GestorPagos pagos;
     final private GestorTexto input;
 
 
-    UI() {
-            this.gestorArchivos = null;
-
-            try {
-                gestorArchivos = new GestorArchivosJSON();
-            } catch (IOException e) {
-                System.out.println("Esto no va ni pagando");
-            }
-
+    UI(GestorArchivos gestorArchivos) {
+            this.gestorArchivos = gestorArchivos;
             this.input = new GestorTexto();
             this.clientes = new GestorClientes(gestorArchivos);
             this.pagos = new GestorPagos(clientes, gestorArchivos);

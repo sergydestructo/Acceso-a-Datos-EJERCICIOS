@@ -35,9 +35,11 @@ public class GestorSQLITE implements GestorArchivos{
 
     }
 
+    /* El metodo sigue con el mismo nombre que se usó al crear la interfaz GestorArchivos pero su proposito es
+       comprobar si existen las tablas y crearlas en caso negativo */
     @Override
-    public void prepararArchivo() throws IOException {
-
+    public void prepararArchivo() {
+        String sql = "";
     }
 
     @Override

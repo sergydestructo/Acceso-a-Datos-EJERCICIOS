@@ -13,7 +13,12 @@ public class EjerciciosTreeMap {
     }
 
     public static List<String> ejercicioA(TreeMap<LocalDate, Transaccion> movimientos) {
-        return null;
+        return movimientos.entrySet().stream()
+                .map(movimiento ->
+                        movimiento.getKey() + ": "
+                                + movimiento.getValue().concepto
+                                + " (" + movimiento.getValue().importe + " €)")
+                .toList();
     }
 
     public static List<Double> ejercicioB(TreeMap<LocalDate, Transaccion> movimientos) {

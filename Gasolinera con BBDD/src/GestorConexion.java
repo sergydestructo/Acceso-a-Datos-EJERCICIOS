@@ -7,14 +7,18 @@ import java.sql.Statement;
 
 public class GestorConexion {
 
-    private Path archivo;
-    private String url;
+    private final Path archivo;
+    private final String url;
 
     public GestorConexion(Path archivo) {
         this.archivo = archivo;
         this.url = "jdbc:sqlite:" + archivo.toAbsolutePath();
     }
 
+    /* Este método tiene dos propósitos: el primero es comprobar que la conexion es posible, si no lo es
+     el programa directamente no ejecutará.
+     El segundo propósito es crear, si no existiese, de manera automática la base de datos SQLite, ya que al crear una
+     conexión, SQLite comprueba si existe la base de datos, si no existe, la crea automáticamente. */
     public boolean primeraConexion() {
         if (!Files.isRegularFile(archivo)) {
             System.err.println("No existe la base de datos SQLite " + archivo.toAbsolutePath());
@@ -37,6 +41,10 @@ public class GestorConexion {
     }
 
     public Connection abrirConexion() throws SQLException {
-        return DriverManager.getConnection(url);
+        Connection conexion = DriverManager.getConnection(url);
+        try (Statement configuracion = conexion.createStatement()) {
+            configuracion.execute("PRAGMA foreign_keys = ON");
+        }
+        return conexion;
     }
 }
