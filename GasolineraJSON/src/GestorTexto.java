@@ -3,6 +3,9 @@ import java.util.Date;
 import java.util.Scanner;
 import java.text.SimpleDateFormat;
 
+/**
+ *
+ */
 public class GestorTexto {
     final private Scanner scan;
 
