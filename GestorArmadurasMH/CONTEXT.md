@@ -100,6 +100,10 @@ No se deben asumir versiones, frameworks, sistemas gestores de bases de datos ni
 
 La información utilizada por la aplicación estará relacionada con el contenido de Monster Hunter Wilds.
 
+Dicha información se obtendrá de una API de terceros. Enlace: https://wilds.mhdb.io/
+
+Documentación de la API: https://docs.wilds.mhdb.io/
+
 Durante el desarrollo se podrán estudiar distintas formas de obtener, estructurar, transformar y almacenar dicha información.
 
 Se deberá prestar especial atención a:
